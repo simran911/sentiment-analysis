@@ -3,6 +3,11 @@ import streamlit as st
 import re
 from nltk.corpus import stopwords  
 
+import nltk
+nltk.download('stopwords')
+#printinl the english stop words
+print(stopwords.words('english'))
+
 # Loading the saved model
 trained_model = pickle.load(open('trained_model.sav', 'rb'))
 porter = pickle.load(open('porter_Stemmer.pkl', 'rb'))
